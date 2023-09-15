@@ -1,7 +1,9 @@
 #! /bin/bash
 
-node login.js $1 "sauma" &
+URL=$1
 
-node login.js $1 "milan" &
+node login.js $URL "sauma" &
 
-node login.js $1 "riya" &
+node login.js $URL "milan" &
+
+node login.js $URL "riya" &
