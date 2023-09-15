@@ -17,7 +17,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   await page.goto("http://localhost:8000");
 
-  await page.setViewport({ width: 1792, height: 920 });
+  await page.setViewport({ width: 1792, height: 920, isLandscape: true });
 
   await delay(2000);
 
