@@ -15,7 +15,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   const page = await browser.newPage();
 
-  await page.goto("http://localhost:8000");
+  await page.goto(process.argv[2]);
 
   await page.setViewport({ width: 1792, height: 920, isLandscape: true });
 
@@ -25,7 +25,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   await delay(2000);
 
-  await page.type("#join-game-input-name", process.argv[2]);
+  await page.type("#join-game-input-name", process.argv[3]);
 
   await page.click("#join-game-confirm-btn");
 })();
