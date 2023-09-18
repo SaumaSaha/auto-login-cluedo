@@ -6,6 +6,8 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   const browser = await puppeteer.launch({
     headless: false,
     args: ["--start-maximized"],
+    defaultViewport: null,
+    ignoreDefaultArgs: ['--enable-automation']
   });
 
   browser.on("targetdestroyed", () => {
@@ -17,7 +19,7 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   await page.goto(process.argv[2]);
 
-  await page.setViewport({ width: 1792, height: 920, isLandscape: true });
+  // await page.setViewport({ width: 1792, height: 950});
 
   await delay(2000);
 
