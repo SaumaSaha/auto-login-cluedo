@@ -2,8 +2,8 @@
 
 URL=$1
 
-node login.js $URL "sauma" &
+node host.js $URL "a" &
 
-node login.js $URL "milan" &
+node login.js $URL "b" &
 
-node login.js $URL "riya" &
+node login.js $URL "c" &

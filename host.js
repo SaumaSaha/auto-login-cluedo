@@ -21,17 +21,13 @@ const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
   await delay(2000);
 
-  await page.click("#join-game-btn");
+  await page.click("#host-game-btn");
 
   await delay(2000);
 
-  await page.type("#join-game-input-name", process.argv[3]);
+  await page.type("#host-game-input-name", process.argv[3]);
 
   await delay(2000);
 
-  await page.type("#join-game-input-lobby-id", "1");
-
-  await delay(2000);
-
-  await page.click("#join-game-confirm-btn");
+  await page.click("#host-game-confirm-btn");
 })();
